@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth
+  createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
@@ -91,8 +91,7 @@ const SignUpForm = () => {
           value={confirmPassword}
           />
 
-        <Button buttonType="submit">SUBMIT</Button>
-        <Button buttonType="google">SUBMIT</Button>
+        <Button buttonType="submit">SIGN UP</Button>
       </form>
     </div>
   )
