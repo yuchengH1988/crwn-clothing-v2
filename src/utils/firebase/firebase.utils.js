@@ -59,6 +59,9 @@ export const addCollectionAndDocuments = async (
 export const getCategoriesAndDocuments = async () => {
   const collectionRef = collection(db, 'categories');
   const q = query(collectionRef);
+
+  // 錯誤測試
+  // await Promise.reject(new Error('error test test'));
   
   const querySnapshot = await getDocs(q);
 
