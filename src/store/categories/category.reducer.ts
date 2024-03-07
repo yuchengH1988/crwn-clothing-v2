@@ -21,7 +21,7 @@ export const CATEGORIES_INITIAL_STATE = {
 
 export const categoriesReducer = (
   state = CATEGORIES_INITIAL_STATE,
-  action = {} as UnknownAction
+  action: UnknownAction
 ): CategoriesState => {
   if (fetchCategoriesStart.match(action)) {
     return { ...state, isLoading: true };
