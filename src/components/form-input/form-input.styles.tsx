@@ -10,7 +10,11 @@ const shrinkLabelStyles = css`
 `
 // 當元素下的特定class 存在，則帶入特定class styles
 
-export const FormInputLabel = styled.label`
+type FormInputLabelProps = {
+  shrink?: boolean;
+}
+
+export const FormInputLabel = styled.label<FormInputLabelProps>`
   color: ${subColor};
   font-size: 16px;
   font-weight: normal;
@@ -20,7 +24,7 @@ export const FormInputLabel = styled.label`
   top: 10px;
   transition: 300ms ease all;
 
-  ${({shrink}) => shrink && shrinkLabelStyles};
+  ${({ shrink }) => shrink && shrinkLabelStyles};
 
 `
 
