@@ -9,6 +9,7 @@ import { store, persistor } from './store/store'
 import { Elements } from '@stripe/react-stripe-js';
 
 import { stripePromise } from './utils/stripe/stripe.utils';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './index.scss';
 
 const container = document.getElementById('root');
@@ -27,3 +28,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
