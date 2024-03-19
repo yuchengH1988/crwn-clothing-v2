@@ -1,10 +1,9 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCurrentUser } from '../../store/user/user.selector';
-
 import { ReactComponent as CrownLogo } from '../../assets/crown.svg';
 
+import {selectCurrentUser} from '../../store/user/user.selector';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { signOutStart } from '../../store/user/user.action';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
